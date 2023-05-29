@@ -10,8 +10,22 @@ import java.util.Scanner;
  *
  * @author kathe
  */
-public class CalculadoraEspecial {
+public class CalculadoraEspecial extends Calculadora{
     
+    public String tipoCalculadora;
+    public String color;
+    public int dimensionPantalla;
+    private String numeroDeSerie;
+    private String nombrePropietario;
+    
+    public CalculadoraEspecial(String propietario){
+        this.tipoCalculadora = "Calculadora Especial";
+        this.dimensionPantalla = 20;
+        this.numeroDeSerie = "1883knff";
+        this.color = "Negro";
+        this.nombrePropietario = propietario;
+    }
+
     public double senoDeUnAngulo(double angulo){
         double anguloEnRadianes = Math.toRadians(angulo);
         double seno = Math.sin(anguloEnRadianes);
